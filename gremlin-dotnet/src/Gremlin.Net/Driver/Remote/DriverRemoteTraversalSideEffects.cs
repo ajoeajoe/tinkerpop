@@ -90,7 +90,7 @@ namespace Gremlin.Net.Driver.Remote
 
         private object RetrieveSideEffectsForKey(string key)
         {
-            return _gremlinClient.SubmitWithSingleResultAsync<object>(SideEffectGatherMessage(key)).Result;
+            return _gremlinClient.SubmitAsync<object>(SideEffectGatherMessage(key)).Result;
         }
 
         private RequestMessage SideEffectGatherMessage(string key)
